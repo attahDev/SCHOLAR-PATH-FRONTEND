@@ -1,7 +1,7 @@
 // Acceptance test: hand-labelled cases run against the prototype's actual engine.
 // Usage: node engine-fixtures.test.js [path-to-prototype.html]
 const fs = require("fs"), vm = require("vm");
-const file = process.argv[2] || "/mnt/user-data/outputs/pathfinder-prototype-v2.html";
+const file = process.argv[2] || require("path").join(__dirname, "index.html");
 let js = fs.readFileSync(file, "utf8").split("<script>")[1].split("</script>")[0];
 js = js.replace(/document\.addEventListener[\s\S]*$/, "") + ";globalThis.__x={ev,P,MY};";
 const ctx = { document: { getElementById: () => ({ addEventListener() {} }) }, scrollTo() {}, console };

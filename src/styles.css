@@ -1,0 +1,55 @@
+:root{--bg:#f6f7f4;--pn:#fff;--ink:#16211d;--mu:#5f6b66;--ln:#dfe4de;--br:#0e6b55;--b2:#e7f2ee;--wa:#a86a00;--wb:#fbf1de;--no:#b3261e;--nb:#fbe9e7;--ok:#12724f;--ob:#e3f3ec;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1512;--pn:#18211d;--ink:#eaf0ec;--mu:#9aa8a1;--ln:#2b3832;--br:#4fc4a2;--b2:#1b2e27;--wa:#e0a63a;--wb:#2d2512;--no:#f08b83;--nb:#331a18;--ok:#5fd3a5;--ob:#15291f}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Georgia,"Iowan Old Style",serif;font-weight:600;margin:0 0 8px}
+h1{font-size:26px}h2{font-size:20px}h3{font-size:16px}
+a{color:var(--br)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 18px;border-bottom:1px solid var(--ln);background:var(--pn);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.logo{font:700 19px Georgia,serif;margin-right:auto;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:2px;overflow-x:auto;max-width:100%}
+nav a{padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--mu);white-space:nowrap}
+nav a.active{background:var(--b2);color:var(--br);font-weight:600}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+button,.btn{font:inherit;border:1px solid var(--ln);background:var(--pn);color:var(--ink);padding:7px 13px;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}
+button:disabled{opacity:.5;cursor:not-allowed}
+button.primary,.btn.primary{background:var(--br);border-color:var(--br);color:#fff}
+button.danger{color:var(--no);border-color:var(--no)}
+button.link{border:0;background:none;color:var(--br);padding:0;text-decoration:underline}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--pn);border:1px solid var(--ln);border-radius:8px;padding:8px 10px;width:100%}
+label{display:block;font-size:13px;color:var(--mu);margin:10px 0 3px}
+.card{background:var(--pn);border:1px solid var(--ln);border-radius:12px;padding:16px;margin-bottom:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.spread{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.muted{color:var(--mu);font-size:13px}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;border:1px solid var(--ln)}
+.badge.ok{background:var(--ob);color:var(--ok);border-color:transparent}
+.badge.warn{background:var(--wb);color:var(--wa);border-color:transparent}
+.badge.no{background:var(--nb);color:var(--no);border-color:transparent}
+.badge.neutral{background:var(--b2);color:var(--mu)}
+.banner{padding:10px 14px;border-radius:10px;background:var(--b2);margin-bottom:14px}
+.banner.warn{background:var(--wb);color:var(--wa)}
+.banner.err{background:var(--nb);color:var(--no)}
+.fit{display:grid;grid-template-columns:96px 1fr 70px;gap:8px;align-items:center;font-size:13px;margin:4px 0}
+.fit .track{height:7px;border-radius:99px;background:var(--b2);overflow:hidden}
+.fit .fill{height:100%;background:var(--br)}
+ul.ev{list-style:none;padding:0;margin:6px 0}
+ul.ev li{padding:3px 0 3px 22px;position:relative}
+ul.ev li::before{position:absolute;left:0;font-weight:700}
+ul.ev li.positive::before{content:"✓";color:var(--ok)}
+ul.ev li.warning::before{content:"⚠";color:var(--wa)}
+ul.ev li.negative::before{content:"✕";color:var(--no)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-bottom:1px solid var(--ln);padding:8px;text-align:left;vertical-align:top}
+.scroll{overflow-x:auto}
+.steps{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.steps span{padding:4px 10px;border-radius:99px;border:1px solid var(--ln);font-size:12px;color:var(--mu)}
+.steps span.on{background:var(--br);color:#fff;border-color:var(--br)}
+.steps span.done{background:var(--b2);color:var(--br)}
+.authbox{max-width:380px;margin:8vh auto;padding:0 16px}
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:4px 12px;max-height:230px;overflow:auto;border:1px solid var(--ln);border-radius:8px;padding:8px}
+.checks label{display:flex;gap:6px;align-items:center;margin:0;color:var(--ink);font-size:14px}
+.checks input{width:auto}
